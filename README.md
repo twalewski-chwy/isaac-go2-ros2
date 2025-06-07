@@ -15,6 +15,7 @@ Welcome to the Isaac Sim Unitree Go2 repository! This repository provides a Unit
   </tr>
 </table>
 
+IsaacSim 4.5 is now supported. Please check the ```isaacsim-4.5``` branch for details.
 
 ## Installation Guide
 **Step I:** Please follow the [Isaac Lab official documentation](https://isaac-sim.github.io/IsaacLab/main/source/setup/installation/binaries_installation.html) to install the Isaac Sim 4.2.0 and Isaac Lab 1.2.0.
