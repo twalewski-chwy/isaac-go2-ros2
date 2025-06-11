@@ -1,0 +1,774 @@
+============================================================
+ASSET.DATA PROPERTIES INSPECTION
+============================================================
+Generated on: 2025-06-11 15:08:14
+
+ Asset type: <class 'isaaclab.assets.articulation.articulation.Articulation'>
+ Asset.data type: <class 'isaaclab.assets.articulation.articulation_data.ArticulationData'>
+
+Found 116 public attributes in asset.data:
+--------------------------------------------------
+ 1. FORWARD_VEC_B             -> Tensor (1, 3) (torch.float32)
+ 2. GRAVITY_VEC_W             -> Tensor (1, 3) (torch.float32)
+ 3. applied_torque            -> Tensor (1, 12) (torch.float32)
+ 4. body_acc_w                -> Tensor (1, 19, 6) (torch.float32)
+ 5. body_ang_acc_w            -> Tensor (1, 19, 3) (torch.float32)
+ 6. body_ang_vel_w            -> Tensor (1, 19, 3) (torch.float32)
+ 7. body_com_acc_w            -> Tensor (1, 19, 6) (torch.float32)
+ 8. body_com_ang_acc_w        -> Tensor (1, 19, 3) (torch.float32)
+ 9. body_com_ang_vel_w        -> Tensor (1, 19, 3) (torch.float32)
+10. body_com_lin_acc_w        -> Tensor (1, 19, 3) (torch.float32)
+11. body_com_lin_vel_w        -> Tensor (1, 19, 3) (torch.float32)
+12. body_com_pos_b            -> Tensor (1, 19, 3) (torch.float32)
+13. body_com_pos_w            -> Tensor (1, 19, 3) (torch.float32)
+14. body_com_pose_b           -> Tensor (1, 19, 7) (torch.float32)
+15. body_com_pose_w           -> Tensor (1, 19, 7) (torch.float32)
+16. body_com_quat_b           -> Tensor (1, 19, 4) (torch.float32)
+17. body_com_quat_w           -> Tensor (1, 19, 4) (torch.float32)
+18. body_com_state_w          -> Tensor (1, 19, 13) (torch.float32)
+19. body_com_vel_w            -> Tensor (1, 19, 6) (torch.float32)
+20. body_incoming_joint_wrench_b -> Tensor (1, 19, 6) (torch.float32)
+21. body_lin_acc_w            -> Tensor (1, 19, 3) (torch.float32)
+22. body_lin_vel_w            -> Tensor (1, 19, 3) (torch.float32)
+23. body_link_ang_vel_w       -> Tensor (1, 19, 3) (torch.float32)
+24. body_link_lin_vel_w       -> Tensor (1, 19, 3) (torch.float32)
+25. body_link_pos_w           -> Tensor (1, 19, 3) (torch.float32)
+26. body_link_pose_w          -> Tensor (1, 19, 7) (torch.float32)
+27. body_link_quat_w          -> Tensor (1, 19, 4) (torch.float32)
+28. body_link_state_w         -> Tensor (1, 19, 13) (torch.float32)
+29. body_link_vel_w           -> Tensor (1, 19, 6) (torch.float32)
+30. body_names                -> list
+31. body_pos_w                -> Tensor (1, 19, 3) (torch.float32)
+32. body_pose_w               -> Tensor (1, 19, 7) (torch.float32)
+33. body_quat_w               -> Tensor (1, 19, 4) (torch.float32)
+34. body_state_w              -> Tensor (1, 19, 13) (torch.float32)
+35. body_vel_w                -> Tensor (1, 19, 6) (torch.float32)
+36. com_pos_b                 -> Tensor (1, 19, 3) (torch.float32)
+37. com_quat_b                -> Tensor (1, 19, 4) (torch.float32)
+38. computed_torque           -> Tensor (1, 12) (torch.float32)
+39. default_fixed_tendon_damping -> NoneType
+40. default_fixed_tendon_limit -> NoneType
+41. default_fixed_tendon_limit_stiffness -> NoneType
+42. default_fixed_tendon_offset -> NoneType
+43. default_fixed_tendon_pos_limits -> NoneType
+44. default_fixed_tendon_rest_length -> NoneType
+45. default_fixed_tendon_stiffness -> NoneType
+46. default_inertia           -> Tensor (1, 19, 9) (torch.float32)
+47. default_joint_armature    -> Tensor (1, 12) (torch.float32)
+48. default_joint_damping     -> Tensor (1, 12) (torch.float32)
+49. default_joint_friction    -> Tensor (1, 12) (torch.float32)
+50. default_joint_friction_coeff -> Tensor (1, 12) (torch.float32)
+51. default_joint_limits      -> Tensor (1, 12, 2) (torch.float32)
+52. default_joint_pos         -> Tensor (1, 12) (torch.float32)
+53. default_joint_pos_limits  -> Tensor (1, 12, 2) (torch.float32)
+54. default_joint_stiffness   -> Tensor (1, 12) (torch.float32)
+55. default_joint_vel         -> Tensor (1, 12) (torch.float32)
+56. default_mass              -> Tensor (1, 19) (torch.float32)
+57. default_root_state        -> Tensor (1, 13) (torch.float32)
+58. device                    -> str
+59. fixed_tendon_damping      -> NoneType
+60. fixed_tendon_limit        -> NoneType
+61. fixed_tendon_limit_stiffness -> NoneType
+62. fixed_tendon_names        -> NoneType
+63. fixed_tendon_offset       -> NoneType
+64. fixed_tendon_pos_limits   -> NoneType
+65. fixed_tendon_rest_length  -> NoneType
+66. fixed_tendon_stiffness    -> NoneType
+67. gear_ratio                -> Tensor (1, 12) (torch.float32)
+68. heading_w                 -> Tensor (1,) (torch.float32)
+69. joint_acc                 -> Tensor (1, 12) (torch.float32)
+70. joint_armature            -> Tensor (1, 12) (torch.float32)
+71. joint_damping             -> Tensor (1, 12) (torch.float32)
+72. joint_effort_limits       -> Tensor (1, 12) (torch.float32)
+73. joint_effort_target       -> Tensor (1, 12) (torch.float32)
+74. joint_friction            -> Tensor (1, 12) (torch.float32)
+75. joint_friction_coeff      -> Tensor (1, 12) (torch.float32)
+76. joint_limits              -> Tensor (1, 12, 2) (torch.float32)
+77. joint_names               -> list
+78. joint_pos                 -> Tensor (1, 12) (torch.float32)
+79. joint_pos_limits          -> Tensor (1, 12, 2) (torch.float32)
+80. joint_pos_target          -> Tensor (1, 12) (torch.float32)
+81. joint_stiffness           -> Tensor (1, 12) (torch.float32)
+82. joint_vel                 -> Tensor (1, 12) (torch.float32)
+83. joint_vel_limits          -> Tensor (1, 12) (torch.float32)
+84. joint_vel_target          -> Tensor (1, 12) (torch.float32)
+85. joint_velocity_limits     -> Tensor (1, 12) (torch.float32)
+86. projected_gravity_b       -> Tensor (1, 3) (torch.float32)
+87. root_ang_vel_b            -> Tensor (1, 3) (torch.float32)
+88. root_ang_vel_w            -> Tensor (1, 3) (torch.float32)
+89. root_com_ang_vel_b        -> Tensor (1, 3) (torch.float32)
+90. root_com_ang_vel_w        -> Tensor (1, 3) (torch.float32)
+91. root_com_lin_vel_b        -> Tensor (1, 3) (torch.float32)
+92. root_com_lin_vel_w        -> Tensor (1, 3) (torch.float32)
+93. root_com_pos_w            -> Tensor (1, 3) (torch.float32)
+94. root_com_pose_w           -> Tensor (1, 7) (torch.float32)
+95. root_com_quat_w           -> Tensor (1, 4) (torch.float32)
+96. root_com_state_w          -> Tensor (1, 13) (torch.float32)
+97. root_com_vel_w            -> Tensor (1, 6) (torch.float32)
+98. root_lin_vel_b            -> Tensor (1, 3) (torch.float32)
+99. root_lin_vel_w            -> Tensor (1, 3) (torch.float32)
+100. root_link_ang_vel_b       -> Tensor (1, 3) (torch.float32)
+101. root_link_ang_vel_w       -> Tensor (1, 3) (torch.float32)
+102. root_link_lin_vel_b       -> Tensor (1, 3) (torch.float32)
+103. root_link_lin_vel_w       -> Tensor (1, 3) (torch.float32)
+104. root_link_pos_w           -> Tensor (1, 3) (torch.float32)
+105. root_link_pose_w          -> Tensor (1, 7) (torch.float32)
+106. root_link_quat_w          -> Tensor (1, 4) (torch.float32)
+107. root_link_state_w         -> Tensor (1, 13) (torch.float32)
+108. root_link_vel_w           -> Tensor (1, 6) (torch.float32)
+109. root_pos_w                -> Tensor (1, 3) (torch.float32)
+110. root_pose_w               -> Tensor (1, 7) (torch.float32)
+111. root_quat_w               -> Tensor (1, 4) (torch.float32)
+112. root_state_w              -> Tensor (1, 13) (torch.float32)
+113. root_vel_w                -> Tensor (1, 6) (torch.float32)
+114. soft_joint_pos_limits     -> Tensor (1, 12, 2) (torch.float32)
+115. soft_joint_vel_limits     -> Tensor (1, 12) (torch.float32)
+116. update                    -> Method/Function
+
+============================================================
+DETAILED TENSOR INFORMATION
+============================================================
+
+FORWARD_VEC_B:
+   Shape: (1, 3)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [1.0, 0.0, 0.0]
+
+GRAVITY_VEC_W:
+   Shape: (1, 3)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [0.0, 0.0, -1.0]
+
+applied_torque:
+   Shape: (1, 12)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]...
+
+body_acc_w:
+   Shape: (1, 19, 6)
+   Dtype: torch.float32
+   Device: cuda:0
+   Min: -13.6383, Max: 64.0615, Mean: 3.2681
+
+body_ang_acc_w:
+   Shape: (1, 19, 3)
+   Dtype: torch.float32
+   Device: cuda:0
+   Min: -13.6383, Max: 64.0615, Mean: 7.4580
+
+body_ang_vel_w:
+   Shape: (1, 19, 3)
+   Dtype: torch.float32
+   Device: cuda:0
+   Min: -6.9753, Max: 7.8898, Mean: -0.4309
+
+body_com_acc_w:
+   Shape: (1, 19, 6)
+   Dtype: torch.float32
+   Device: cuda:0
+   Min: -13.6383, Max: 64.0615, Mean: 3.2681
+
+body_com_ang_acc_w:
+   Shape: (1, 19, 3)
+   Dtype: torch.float32
+   Device: cuda:0
+   Min: -13.6383, Max: 64.0615, Mean: 7.4580
+
+body_com_ang_vel_w:
+   Shape: (1, 19, 3)
+   Dtype: torch.float32
+   Device: cuda:0
+   Min: -6.9753, Max: 7.8898, Mean: -0.4309
+
+body_com_lin_acc_w:
+   Shape: (1, 19, 3)
+   Dtype: torch.float32
+   Device: cuda:0
+   Min: -12.0798, Max: 13.6017, Mean: -0.9218
+
+body_com_lin_vel_w:
+   Shape: (1, 19, 3)
+   Dtype: torch.float32
+   Device: cuda:0
+   Min: -0.8303, Max: 1.1522, Mean: 0.2631
+
+body_com_pos_b:
+   Shape: (1, 19, 3)
+   Dtype: torch.float32
+   Device: cuda:0
+   Min: -0.1150, Max: 0.0223, Mean: -0.0100
+
+body_com_pos_w:
+   Shape: (1, 19, 3)
+   Dtype: torch.float32
+   Device: cuda:0
+   Min: -0.1992, Max: 0.4189, Mean: 0.0902
+
+body_com_pose_b:
+   Shape: (1, 19, 7)
+   Dtype: torch.float32
+   Device: cuda:0
+   Min: -0.1965, Max: 1.0000, Mean: 0.1391
+
+body_com_pose_w:
+   Shape: (1, 19, 7)
+   Dtype: torch.float32
+   Device: cuda:0
+   Min: -0.1993, Max: 1.0000, Mean: 0.1809
+
+body_com_quat_b:
+   Shape: (1, 19, 4)
+   Dtype: torch.float32
+   Device: cuda:0
+   Min: -0.1965, Max: 1.0000, Mean: 0.2509
+
+body_com_quat_w:
+   Shape: (1, 19, 4)
+   Dtype: torch.float32
+   Device: cuda:0
+   Min: -0.1993, Max: 1.0000, Mean: 0.2489
+
+body_com_state_w:
+   Shape: (1, 19, 13)
+   Dtype: torch.float32
+   Device: cuda:0
+   Min: -6.9753, Max: 7.8898, Mean: 0.0587
+
+body_com_vel_w:
+   Shape: (1, 19, 6)
+   Dtype: torch.float32
+   Device: cuda:0
+   Min: -6.9753, Max: 7.8898, Mean: -0.0839
+
+body_incoming_joint_wrench_b:
+   Shape: (1, 19, 6)
+   Dtype: torch.float32
+   Device: cuda:0
+   Min: -3.1069, Max: 48.9902, Mean: 2.2797
+
+body_lin_acc_w:
+   Shape: (1, 19, 3)
+   Dtype: torch.float32
+   Device: cuda:0
+   Min: -12.0798, Max: 13.6017, Mean: -0.9218
+
+body_lin_vel_w:
+   Shape: (1, 19, 3)
+   Dtype: torch.float32
+   Device: cuda:0
+   Min: -0.8303, Max: 1.1522, Mean: 0.2631
+
+body_link_ang_vel_w:
+   Shape: (1, 19, 3)
+   Dtype: torch.float32
+   Device: cuda:0
+   Min: -6.9753, Max: 7.8898, Mean: -0.4309
+
+body_link_lin_vel_w:
+   Shape: (1, 19, 3)
+   Dtype: torch.float32
+   Device: cuda:0
+   Min: -1.6251, Max: 1.1522, Mean: 0.2151
+
+body_link_pos_w:
+   Shape: (1, 19, 3)
+   Dtype: torch.float32
+   Device: cuda:0
+   Min: -0.2095, Max: 0.4189, Mean: 0.0997
+
+body_link_pose_w:
+   Shape: (1, 19, 7)
+   Dtype: torch.float32
+   Device: cuda:0
+   Min: -0.2095, Max: 1.0000, Mean: 0.1845
+
+body_link_quat_w:
+   Shape: (1, 19, 4)
+   Dtype: torch.float32
+   Device: cuda:0
+   Min: -0.0350, Max: 1.0000, Mean: 0.2481
+
+body_link_state_w:
+   Shape: (1, 19, 13)
+   Dtype: torch.float32
+   Device: cuda:0
+   Min: -6.9753, Max: 7.8898, Mean: 0.0496
+
+body_link_vel_w:
+   Shape: (1, 19, 6)
+   Dtype: torch.float32
+   Device: cuda:0
+   Min: -6.9753, Max: 7.8898, Mean: -0.1079
+
+body_pos_w:
+   Shape: (1, 19, 3)
+   Dtype: torch.float32
+   Device: cuda:0
+   Min: -0.2095, Max: 0.4189, Mean: 0.0997
+
+body_pose_w:
+   Shape: (1, 19, 7)
+   Dtype: torch.float32
+   Device: cuda:0
+   Min: -0.2095, Max: 1.0000, Mean: 0.1845
+
+body_quat_w:
+   Shape: (1, 19, 4)
+   Dtype: torch.float32
+   Device: cuda:0
+   Min: -0.0350, Max: 1.0000, Mean: 0.2481
+
+body_state_w:
+   Shape: (1, 19, 13)
+   Dtype: torch.float32
+   Device: cuda:0
+   Min: -6.9753, Max: 7.8898, Mean: 0.0606
+
+body_vel_w:
+   Shape: (1, 19, 6)
+   Dtype: torch.float32
+   Device: cuda:0
+   Min: -6.9753, Max: 7.8898, Mean: -0.0839
+
+com_pos_b:
+   Shape: (1, 19, 3)
+   Dtype: torch.float32
+   Device: cuda:0
+   Min: -0.1150, Max: 0.0223, Mean: -0.0100
+
+com_quat_b:
+   Shape: (1, 19, 4)
+   Dtype: torch.float32
+   Device: cuda:0
+   Min: -0.1965, Max: 1.0000, Mean: 0.2509
+
+computed_torque:
+   Shape: (1, 12)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]...
+
+default_inertia:
+   Shape: (1, 19, 9)
+   Dtype: torch.float32
+   Device: cpu
+   Min: -0.0008, Max: 0.1070, Mean: 0.0017
+
+default_joint_armature:
+   Shape: (1, 12)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]...
+
+default_joint_damping:
+   Shape: (1, 12)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5]...
+
+default_joint_friction:
+   Shape: (1, 12)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]...
+
+default_joint_friction_coeff:
+   Shape: (1, 12)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]...
+
+default_joint_limits:
+   Shape: (1, 12, 2)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [-1.0471998453140259, 1.0471998453140259, -1.0471998453140259, 1.0471998453140259, -1.0471998453140259, 1.0471998453140259, -1.0471998453140259, 1.0471998453140259, -1.5707999467849731, 3.4906997680664062]...
+
+default_joint_pos:
+   Shape: (1, 12)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [0.10000000149011612, -0.10000000149011612, 0.10000000149011612, -0.10000000149011612, 0.800000011920929, 0.800000011920929, 1.0, 1.0, -1.5, -1.5]...
+
+default_joint_pos_limits:
+   Shape: (1, 12, 2)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [-1.0471998453140259, 1.0471998453140259, -1.0471998453140259, 1.0471998453140259, -1.0471998453140259, 1.0471998453140259, -1.0471998453140259, 1.0471998453140259, -1.5707999467849731, 3.4906997680664062]...
+
+default_joint_stiffness:
+   Shape: (1, 12)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [25.0, 25.0, 25.0, 25.0, 25.0, 25.0, 25.0, 25.0, 25.0, 25.0]...
+
+default_joint_vel:
+   Shape: (1, 12)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]...
+
+default_mass:
+   Shape: (1, 19)
+   Dtype: torch.float32
+   Device: cpu
+   Values: [6.9210004806518555, 0.6779999732971191, 0.6779999732971191, 0.0010000000474974513, 0.6779999732971191, 0.6779999732971191, 1.1519999504089355, 1.1519999504089355, 0.0010000000474974513, 1.1519999504089355]...
+
+default_root_state:
+   Shape: (1, 13)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [0.0, 0.0, 0.4000000059604645, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]...
+
+gear_ratio:
+   Shape: (1, 12)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]...
+
+heading_w:
+   Shape: (1,)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [-0.00015495848492719233]
+
+joint_acc:
+   Shape: (1, 12)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]...
+
+joint_armature:
+   Shape: (1, 12)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]...
+
+joint_damping:
+   Shape: (1, 12)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]...
+
+joint_effort_limits:
+   Shape: (1, 12)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [1000000000.0, 1000000000.0, 1000000000.0, 1000000000.0, 1000000000.0, 1000000000.0, 1000000000.0, 1000000000.0, 1000000000.0, 1000000000.0]...
+
+joint_effort_target:
+   Shape: (1, 12)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]...
+
+joint_friction:
+   Shape: (1, 12)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]...
+
+joint_friction_coeff:
+   Shape: (1, 12)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]...
+
+joint_limits:
+   Shape: (1, 12, 2)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [-1.0471998453140259, 1.0471998453140259, -1.0471998453140259, 1.0471998453140259, -1.0471998453140259, 1.0471998453140259, -1.0471998453140259, 1.0471998453140259, -1.5707999467849731, 3.4906997680664062]...
+
+joint_pos:
+   Shape: (1, 12)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [0.004323180299252272, 0.004132023546844721, 0.0041680228896439075, 0.0039774831384420395, 0.0785112977027893, 0.07802382856607437, 0.07771804183721542, 0.07777684181928635, -0.148366779088974, -0.1476021260023117]...
+
+joint_pos_limits:
+   Shape: (1, 12, 2)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [-1.0471998453140259, 1.0471998453140259, -1.0471998453140259, 1.0471998453140259, -1.0471998453140259, 1.0471998453140259, -1.0471998453140259, 1.0471998453140259, -1.5707999467849731, 3.4906997680664062]...
+
+joint_pos_target:
+   Shape: (1, 12)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]...
+
+joint_stiffness:
+   Shape: (1, 12)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]...
+
+joint_vel:
+   Shape: (1, 12)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [0.13477525115013123, 0.11140760034322739, 0.12287931144237518, 0.09512491524219513, 7.880357265472412, 7.873315811157227, 7.881636619567871, 7.874117851257324, -14.829848289489746, -14.856729507446289]...
+
+joint_vel_limits:
+   Shape: (1, 12)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [30.100000381469727, 30.100000381469727, 30.100000381469727, 30.100000381469727, 30.100000381469727, 30.100000381469727, 30.100000381469727, 30.100000381469727, 15.69999885559082, 15.69999885559082]...
+
+joint_vel_target:
+   Shape: (1, 12)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]...
+
+joint_velocity_limits:
+   Shape: (1, 12)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [30.100000381469727, 30.100000381469727, 30.100000381469727, 30.100000381469727, 30.100000381469727, 30.100000381469727, 30.100000381469727, 30.100000381469727, 15.69999885559082, 15.69999885559082]...
+
+projected_gravity_b:
+   Shape: (1, 3)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [-0.00025549589190632105, 0.004241191316395998, -0.9999909996986389]
+
+root_ang_vel_b:
+   Shape: (1, 3)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [-0.11314590275287628, 0.008166417479515076, -0.011001063510775566]
+
+root_ang_vel_w:
+   Shape: (1, 3)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [-0.11314181983470917, 0.008137218654155731, -0.011064507998526096]
+
+root_com_ang_vel_b:
+   Shape: (1, 3)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [-0.11314590275287628, 0.008166417479515076, -0.011001063510775566]
+
+root_com_ang_vel_w:
+   Shape: (1, 3)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [-0.11314181983470917, 0.008137218654155731, -0.011064507998526096]
+
+root_com_lin_vel_b:
+   Shape: (1, 3)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [0.05054023861885071, -0.0032186813186854124, 0.9100768566131592]
+
+root_com_lin_vel_w:
+   Shape: (1, 3)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [0.05030781403183937, 0.0006333626806735992, 0.91009521484375]
+
+root_com_pos_w:
+   Shape: (1, 3)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [0.021557854488492012, 3.4326025343034416e-05, 0.4035155177116394]
+
+root_com_pose_w:
+   Shape: (1, 7)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [0.021557854488492012, 3.4326025343034416e-05, 0.4035155177116394, 0.9999602437019348, -0.0005066394805908203, 0.008862782269716263, -0.0009409916820004582]
+
+root_com_quat_w:
+   Shape: (1, 4)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [0.9999602437019348, -0.0005066394805908203, 0.008862782269716263, -0.0009409916820004582]
+
+root_com_state_w:
+   Shape: (1, 13)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [0.021557854488492012, 3.4326025343034416e-05, 0.4035155177116394, 0.9999602437019348, -0.0005066394805908203, 0.008862782269716263, -0.0009409916820004582, 0.05030781403183937, 0.0006333626806735992, 0.91009521484375]...
+
+root_com_vel_w:
+   Shape: (1, 6)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [0.05030781403183937, 0.0006333626806735992, 0.91009521484375, -0.11314181983470917, 0.008137218654155731, -0.011064507998526096]
+
+root_lin_vel_b:
+   Shape: (1, 3)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [0.05054023861885071, -0.0032186813186854124, 0.9100768566131592]
+
+root_lin_vel_w:
+   Shape: (1, 3)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [0.05030781403183937, 0.0006333626806735992, 0.91009521484375]
+
+root_link_ang_vel_b:
+   Shape: (1, 3)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [-0.11314590275287628, 0.008166417479515076, -0.011001063510775566]
+
+root_link_ang_vel_w:
+   Shape: (1, 3)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [-0.11314181983470917, 0.008137218654155731, -0.011064507998526096]
+
+root_link_lin_vel_b:
+   Shape: (1, 3)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [0.050584059208631516, -0.0023792858701199293, 0.9102492332458496]
+
+root_link_lin_vel_w:
+   Shape: (1, 3)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [0.05035172030329704, 0.0014734748983755708, 0.9102640748023987]
+
+root_link_pos_w:
+   Shape: (1, 3)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [0.0004444904625415802, 6.035595288267359e-05, 0.40887606143951416]
+
+root_link_pose_w:
+   Shape: (1, 7)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [0.0004444904625415802, 6.035595288267359e-05, 0.40887606143951416, 0.9999977350234985, -0.002120610559359193, -0.0001275833637919277, -7.77499662945047e-05]
+
+root_link_quat_w:
+   Shape: (1, 4)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [0.9999977350234985, -0.002120610559359193, -0.0001275833637919277, -7.77499662945047e-05]
+
+root_link_state_w:
+   Shape: (1, 13)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [0.0004444904625415802, 6.035595288267359e-05, 0.40887606143951416, 0.9999977350234985, -0.002120610559359193, -0.0001275833637919277, -7.77499662945047e-05, 0.05035172030329704, 0.0014734748983755708, 0.9102640748023987]...
+
+root_link_vel_w:
+   Shape: (1, 6)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [0.05035172030329704, 0.0014734748983755708, 0.9102640748023987, -0.11314181983470917, 0.008137218654155731, -0.011064507998526096]
+
+root_pos_w:
+   Shape: (1, 3)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [0.0004444904625415802, 6.035595288267359e-05, 0.40887606143951416]
+
+root_pose_w:
+   Shape: (1, 7)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [0.0004444904625415802, 6.035595288267359e-05, 0.40887606143951416, 0.9999977350234985, -0.002120610559359193, -0.0001275833637919277, -7.77499662945047e-05]
+
+root_quat_w:
+   Shape: (1, 4)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [0.9999977350234985, -0.002120610559359193, -0.0001275833637919277, -7.77499662945047e-05]
+
+root_state_w:
+   Shape: (1, 13)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [0.0004444904625415802, 6.035595288267359e-05, 0.40887606143951416, 0.9999977350234985, -0.002120610559359193, -0.0001275833637919277, -7.77499662945047e-05, 0.05030781403183937, 0.0006333626806735992, 0.91009521484375]...
+
+root_vel_w:
+   Shape: (1, 6)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [0.05030781403183937, 0.0006333626806735992, 0.91009521484375, -0.11314181983470917, 0.008137218654155731, -0.011064507998526096]
+
+soft_joint_pos_limits:
+   Shape: (1, 12, 2)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [-0.9424798488616943, 0.9424798488616943, -0.9424798488616943, 0.9424798488616943, -0.9424798488616943, 0.9424798488616943, -0.9424798488616943, 0.9424798488616943, -1.3177247047424316, 3.2376246452331543]...
+
+soft_joint_vel_limits:
+   Shape: (1, 12)
+   Dtype: torch.float32
+   Device: cuda:0
+   Values: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]...
+
+============================================================
+COMMONLY USED PROPERTIES
+============================================================
+[YES] root_state_w         -> (1, 13) - Root state in world frame [pos(3) + quat(4)]
+[YES] root_lin_vel_b       -> (1, 3) - Root linear velocity in body frame
+[YES] root_ang_vel_b       -> (1, 3) - Root angular velocity in body frame
+[YES] joint_pos            -> (1, 12) - Joint positions
+[YES] joint_vel            -> (1, 12) - Joint velocities
+[YES] joint_acc            -> (1, 12) - Joint accelerations (if available)
+[YES] body_lin_vel_w       -> (1, 19, 3) - Body linear velocities in world frame (if available)
+[YES] body_ang_vel_w       -> (1, 19, 3) - Body angular velocities in world frame (if available)
+[YES] projected_gravity_b  -> (1, 3) - Projected gravity in body frame (if available)
+[NO]  contact_forces       -> Not available - Contact forces (if available)
+
+============================================================
+EXAMPLE USAGE
+============================================================
+
+# Example usage in reward/termination functions:
+
+def my_reward_function(env, asset_cfg: SceneEntityCfg = SceneEntityCfg("unitree_go2")) -> torch.Tensor:
+    asset = env.scene[asset_cfg.name]
+    
+    # Get forward velocity (x-axis in body frame)
+    forward_vel = asset.data.root_lin_vel_b[:, 0]
+    
+    # Get base height (z-coordinate in world frame)
+    base_height = asset.data.root_state_w[:, 2]
+    
+    # Get joint velocities
+    joint_vels = asset.data.joint_vel
+    
+    # Get base orientation (quaternion)
+    base_quat = asset.data.root_state_w[:, 3:7]  # [w, x, y, z]
+    
+    return forward_vel  # or whatever computation you need
+
+# Additional examples:
+
+def check_robot_stability(env, asset_cfg: SceneEntityCfg = SceneEntityCfg("unitree_go2")) -> torch.Tensor:
+    asset = env.scene[asset_cfg.name]
+    
+    # Check if robot is upright (quaternion w component should be close to 1 for upright)
+    base_quat = asset.data.root_state_w[:, 3:7]  # [w, x, y, z]
+    upright_score = torch.abs(base_quat[:, 0])  # w component
+    
+    return upright_score
+
+def get_joint_power(env, asset_cfg: SceneEntityCfg = SceneEntityCfg("unitree_go2")) -> torch.Tensor:
+    asset = env.scene[asset_cfg.name]
+    
+    # Power = torque * angular_velocity (approximate)
+    joint_velocities = asset.data.joint_vel
+    # Note: You'd need joint_torques from elsewhere for actual power calculation
+    
+    return torch.sum(torch.abs(joint_velocities), dim=1)  # Sum of absolute velocities as proxy
+
+
+============================================================
+TENSOR INDEXING REFERENCE
+============================================================

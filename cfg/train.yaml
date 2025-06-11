@@ -1,0 +1,48 @@
+defaults:
+  - _self_
+
+# Environment selection
+env_name: "none"  # Options: obstacle-dense, obstacle-medium, obstacle-sparse, warehouse, warehouse-forklifts, warehouse-shelves, full-warehouse, none
+
+# Training settings
+num_envs: 128  # Adjust based on your GPU memory
+max_iterations: 3000
+save_interval: 100
+log_interval: 10
+
+# Environment settings
+episode_length_s: 20.0
+decimation: 2
+env_spacing: 2.0
+
+# Device settings
+device: "cuda:0"  # or "cpu" for CPU training
+seed: 42
+
+# Reward weights (can be tuned)
+rewards:
+  forward_velocity: 1.0
+  angular_velocity_penalty: -0.05
+  lateral_velocity_penalty: -0.1
+  joint_velocity_penalty: -0.0001
+  action_smoothness_penalty: -0.01
+  base_height_penalty: -0.3
+  alive_bonus: 0.5
+
+# PPO hyperparameters
+ppo:
+  learning_rate: 0.001
+  num_steps_per_env: 24
+  num_learning_epochs: 5
+  num_mini_batches: 4
+  clip_param: 0.2
+  entropy_coef: 0.01
+  gamma: 0.99
+  lam: 0.95
+
+# Policy network architecture
+policy:
+  actor_hidden_dims: [128, 128, 128]
+  critic_hidden_dims: [128, 128, 128]
+  activation: "elu"
+  init_noise_std: 1.0 
