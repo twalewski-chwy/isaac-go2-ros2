@@ -15,6 +15,8 @@ from isaacsim.core.utils.viewports import set_camera_view
 import numpy as np
 from scipy.spatial.transform import Rotation as R
 import go2.go2_ctrl as go2_ctrl
+import torch
+
 
 
 @configclass
@@ -46,7 +48,11 @@ class Go2SimCfg(InteractiveSceneCfg):
     # Go2 Robot
     unitree_go2: ArticulationCfg = UNITREE_GO2_CFG.replace(prim_path="{ENV_REGEX_NS}/Go2")
     # Go2 foot contact sensor
-    contact_forces = ContactSensorCfg(prim_path="{ENV_REGEX_NS}/Go2/.*_foot", history_length=3, track_air_time=True)
+    contact_forces = ContactSensorCfg(prim_path="{ENV_REGEX_NS}/Go2/.*_foot", history_length=0, track_air_time=True)
+
+    body_contact = ContactSensorCfg(prim_path="{ENV_REGEX_NS}/Go2/base", history_length=0, track_air_time=True)
+
+    head_contact = ContactSensorCfg(prim_path="{ENV_REGEX_NS}/Go2/Head_(upper|lower)", history_length=0, track_air_time=True)
 
     # Go2 height scanner
     height_scanner = RayCasterCfg(
@@ -63,10 +69,15 @@ class ActionsCfg:
     """Action specifications for the environment."""
     joint_pos = mdp.JointPositionActionCfg(asset_name="unitree_go2", joint_names=[".*"])
 
+def contact_forces(env, sensor_cfg: SceneEntityCfg = SceneEntityCfg("contact_forces")):
+    contact_sensor = env.scene[sensor_cfg.name]
+    contact_data = contact_sensor.data.net_forces_w
+    return contact_data.reshape(contact_data.shape[0], -1)
+
 @configclass
 class ObservationsCfg:
     """Observation specifications for the environment."""
-
+   
     @configclass
     class PolicyCfg(ObsGroup):
         """Observations for policy group."""
@@ -80,7 +91,8 @@ class ObservationsCfg:
                                     params={"asset_cfg": SceneEntityCfg(name="unitree_go2")},
                                     noise=UniformNoiseCfg(n_min=-0.05, n_max=0.05))
         # velocity command
-        base_vel_cmd = ObsTerm(func=go2_ctrl.base_vel_cmd)
+        base_vel_cmd = ObsTerm(func=go2_ctrl.base_vel_cmd,
+                              noise=UniformNoiseCfg(n_min=-0.05, n_max=0.05))
 
         joint_pos = ObsTerm(func=mdp.joint_pos_rel,
                             params={"asset_cfg": SceneEntityCfg(name="unitree_go2")})
@@ -92,6 +104,9 @@ class ObservationsCfg:
         height_scan = ObsTerm(func=mdp.height_scan,
                               params={"sensor_cfg": SceneEntityCfg("height_scanner")},
                               clip=(-1.0, 1.0))
+
+
+        foot_contact = ObsTerm(func=contact_forces)
 
         def __post_init__(self) -> None:
             self.enable_corruption = False
@@ -158,8 +173,7 @@ class Go2RSLEnvCfg(ManagerBasedRLEnvCfg):
         self.viewer.lookat = [0.0, 0.0, 0.0]
 
         # step settings
-        self.decimation = 8  # step
-
+        self.decimation = 8
         # simulation settings
         self.sim.dt = 0.005  # sim step every 
         self.sim.render_interval = self.decimation  

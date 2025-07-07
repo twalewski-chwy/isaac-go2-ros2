@@ -2,10 +2,10 @@ defaults:
   - _self_
 
 num_envs: 1
-freq: 40 # can only be divisible by 200
+freq: 25 # freq needs to be divisible by simulation frequency
 camera_follow: True
-env_name: obstacle-dense
-# env_name: full-warehouse
+# env_name: obstacle-dense
+env_name: full-warehouse
 
 sensor:
   enable_lidar: True
