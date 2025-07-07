@@ -38,11 +38,12 @@ def run_simulator(cfg):
     # Go2 Environment setup
     go2_env_cfg = Go2RSLEnvCfg()
     go2_env_cfg.scene.num_envs = cfg.num_envs
-    go2_env_cfg.decimation = math.ceil(1./go2_env_cfg.sim.dt/cfg.freq)
+    #go2_env_cfg.decimation = 8 #math.ceil(1./go2_env_cfg.sim.dt/cfg.freq)
     go2_env_cfg.sim.render_interval = go2_env_cfg.decimation
     go2_ctrl.init_base_vel_cmd(cfg.num_envs)
     # env, policy = go2_ctrl.get_rsl_flat_policy(go2_env_cfg)
-    env, policy = go2_ctrl.get_rsl_rough_policy(go2_env_cfg)
+    # env, policy = go2_ctrl.get_rsl_rough_policy(go2_env_cfg)
+    env, policy = go2_ctrl.get_rsl_straight_line_policy(go2_env_cfg)
 
     # Simulation environment
     if (cfg.env_name == "obstacle-dense"):
